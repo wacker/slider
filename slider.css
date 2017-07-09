@@ -1,0 +1,40 @@
+.slider {
+	position: relative;
+	background: #888;
+	touch-action: none;
+	user-select: none;
+	-webkit-user-select: none;
+}
+.slider.horizontal {
+	width: 200px;
+	height: 2px;
+}
+.slider.vertical {
+	height: 200px;
+	width: 2px;
+}
+
+.slider .handle {
+	position: absolute;
+	cursor: pointer;
+}
+.slider .handle::before {
+	content: '';
+	display: block;
+	box-sizing: border-box;
+	position: absolute;
+	border: 1px solid #ccc;
+	background: #eee;
+}
+.slider.horizontal .handle::before {
+	top: -15px;
+	left: -8px;
+	width: 16px;
+	height: 30px;
+}
+.slider.vertical .handle::before {
+	top: -8px;
+	left: -15px;
+	width: 30px;
+	height: 16px;
+}
